@@ -1,0 +1,18 @@
+Metadata-Version: 1.0
+Name: mork
+Version: 0.1
+Summary: Mork file parser library
+Home-page: http://tarvid.kallimagarden.com/mork
+Author: Juraj Svec
+Author-email: ageorgo at users dot sourceforge dot net
+License: GPL-2
+Description: This library should be able to properly parse ?every? mork file, however
+        the storage and data structures that are build during parsing may not exactly
+        correspond to structures which were used to create the file (commit and
+        rollback are not supported).
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
