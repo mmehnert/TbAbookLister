@@ -64,7 +64,10 @@ class TbAbookMorkParser:
 				# 	row.cells[self.nickNameToken], \
 				# 	row.cells[self.primaryEmailToken], \
 				# 	row.cells[self.secondEmailToken]
-				name = row.cells[self.displayNameToken].atom.strip()
+				try:
+                                    name = row.cells[self.displayNameToken].atom.strip()
+                                except Exception:
+                                    continue
 				if name == '':
 					name = row.cells[self.firstNameToken].atom.strip()
 					lname = row.cells[self.lastNameToken].atom.strip()
@@ -76,7 +79,10 @@ class TbAbookMorkParser:
 						name = row.cells[self.nickNameToken].atom.strip()
 				if name == '': name = None
 				mail1 = row.cells[self.primaryEmailToken].atom.strip()
-				mail2 = row.cells[self.secondEmailToken].atom.strip()
+				try:
+                                    mail2 = row.cells[self.secondEmailToken].atom.strip()
+                                except Exception:
+                                       continue 
 				if mail1 != '':
 					self.emails += [(name, mail1)]
 				if mail2 != '':
